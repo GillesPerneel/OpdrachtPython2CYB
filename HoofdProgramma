@@ -1,0 +1,26 @@
+import subprocess
+import os
+from Klasse.CreateAndEditRowOmzet import add_to_omzet
+from Klasse.CreateAndEditRowOmzet import edit_row_omzet
+from Klasse.CreateAndEditRowGewerkteUren import add_to_gewerkte_uren
+from Klasse.CreateAndEditRowGewerkteUren import edit_row_gewerkte_uren
+
+
+def create_database():
+     script_path = os.path.join('Klasse', 'CreateDB')
+     try:
+        subprocess.run(['python', script_path], check=True)
+        print("Database aangemaakt.")
+     except subprocess.CalledProcessError as e:
+        print(f"Fout bij het uitvoeren van het script: {e}")
+
+create_database()
+#Uw database zou moeten aangemaakt zijn. (Indien niet -> zie path in klasse:CreateDB of .gitignore)
+
+# Voorbeeld van het toevoegen van een nieuwe rij aan de tabel 'omzet'
+# Vervang deze waarden door de werkelijke waarden die je wilt toevoegen
+# Gebruikte format = YYYY/MM/DD
+add_to_omzet('2020-01-12' , 500)
+edit_row_omzet(1,'2022-01-12' , 1000)
+
+
