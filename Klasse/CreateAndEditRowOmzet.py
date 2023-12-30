@@ -47,8 +47,9 @@ def edit_row_omzet(row_id, new_datum, new_bedrag):
     try:
         cursor.execute(update_query, (new_datum, new_bedrag, row_id))
         conn.commit()
-        print(f"Row with ID {row_id} updated in the 'omzet' table.")
+        print(f"Rij met ID {row_id} bijgewerkt in de 'omzet' tabel.")
     except sqlite3.Error as e:
-        print(f"Error updating row: {e}")
+        print(f"Fout bij bijwerken van de rij: {e}")
+
 
     conn.close()

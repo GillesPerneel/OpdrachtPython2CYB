@@ -19,9 +19,10 @@ def add_to_gewerkte_uren(datum, uren):
     try:
         cursor.execute(insert_query, (datum, uren))
         conn.commit()
-        print("Row added to the 'gewerkte_uren' table.")
+        print("Rij toegevoegd aan de 'gewerkte_uren' tabel.")
     except sqlite3.Error as e:
-        print(f"Error adding row: {e}")
+        print(f"Fout bij toevoegen van rij: {e}")
+
 
     conn.close()
 
@@ -45,8 +46,9 @@ def edit_row_gewerkte_uren(row_id, new_datum, new_uren):
     try:
         cursor.execute(update_query, (new_datum, new_uren, row_id))
         conn.commit()
-        print(f"Row with ID {row_id} updated in the 'gewerkte_uren' table.")
+        print(f"Rij met ID {row_id} bijgewerkt in de 'gewerkte_uren' tabel.")
     except sqlite3.Error as e:
-        print(f"Error updating row: {e}")
+        print(f"Fout bij bijwerken van rij: {e}")
+
 
     conn.close()
