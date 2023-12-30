@@ -6,6 +6,10 @@ Deze tabellen zijn: gewerkte uren + omzet gegenereerd in de gewerkte uren
 Wat is het doel hiervan? 
 Zo kunnen we na gaan hoeveel er gemiddeld wordt verkocht in bepaalde uren.
 
-LET OP!
-in Klasse CreateDB zal de path naar de SQLlite database zelf nog moeten aangepast worden.
 
+
+Functionaliteiten:
+    edit_row_gewerkte_uren vb.edit_row_gewerkte_uren(1,'2020-01-22',3)
+    add_to_gewerkte_uren vb.add_to_gewerkte_uren('2020-01-22',5)
+    edit_row_omzet vb.edit_row_omzet(1,'2022-01-12' , 1000)
+    add_to_omzet vb.add_to_omzet('2020-01-12' , 500)

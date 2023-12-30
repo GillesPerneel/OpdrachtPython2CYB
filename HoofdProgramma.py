@@ -2,7 +2,7 @@ import subprocess
 import os
 from Klasse.CreateAndEditRowGewerkteUren import edit_row_gewerkte_uren, add_to_gewerkte_uren
 from Klasse.CreateAndEditRowOmzet import edit_row_omzet, add_to_omzet
-
+import Klasse.CreateDB as create_database
 
 def create_database():
      script_path = os.path.join('Klasse', 'CreateDB.py')
