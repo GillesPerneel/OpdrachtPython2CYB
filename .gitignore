@@ -160,6 +160,5 @@ cython_debug/
 #.idea/
 
 #Aanmaken DATABASE
-\vb_database.db
 .os
 .sqlite3

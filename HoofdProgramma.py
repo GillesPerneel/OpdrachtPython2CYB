@@ -1,10 +1,12 @@
 import subprocess
 import os
+import openpyxl 
+import xlsxwriter
 from Klasse.CreateAndEditRowGewerkteUren import edit_row_gewerkte_uren, add_to_gewerkte_uren
 from Klasse.CreateAndEditRowOmzet import edit_row_omzet, add_to_omzet
 import Klasse.CreateDB as create_database
-import Klasse.CreateCSV as CreatCSV
-import Klasse.CreateExcel as CreateExcel
+from Klasse.CreateExcelFile import get_omzet_dataExcel , export_to_excel
+from Klasse.CreateCSVFile import get_omzet_data, export_to_csv
 
 def create_database():
      script_path = os.path.join('Klasse', 'CreateDB.py')
@@ -20,9 +22,12 @@ create_database()
 # Voorbeeld van het toevoegen van een nieuwe rij aan de tabel 'omzet'
 # Vervang deze waarden door de werkelijke waarden die je wilt toevoegen
 # Gebruikte format = YYYY/MM/DD
-add_to_omzet('2020-01-12' , 500)
-edit_row_omzet(1,'2022-01-12' , 1000)
-add_to_gewerkte_uren('2020-01-22',5)
-edit_row_gewerkte_uren(1,'2020-01-22',3)
+
+
+
+Data = get_omzet_data()
+export_to_csv(Data, 'OmzetData_31_12.csv')
+DataEx = get_omzet_dataExcel()
+export_to_excel(DataEx , 'OmzetData_31_12.xlsx')
 
 
