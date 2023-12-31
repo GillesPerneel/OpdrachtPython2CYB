@@ -4,7 +4,7 @@ In deze opdracht gaan we tewerk in een winkel.
 Hier hebben we 2 database tabellen die we gaan kunnen veranderen + dingen toevoegen.
 Deze tabellen zijn: gewerkte uren + omzet gegenereerd in de gewerkte uren
 Wat is het doel hiervan? 
-Zo kunnen we na gaan hoeveel er gemiddeld wordt verkocht in bepaalde uren.
+Zo kunnen we na gaan hoeveel er gemiddeld wordt verkocht in bepaalde uren vb. na een uur .
 
 
 
@@ -13,3 +13,11 @@ Functionaliteiten:
     add_to_gewerkte_uren vb.add_to_gewerkte_uren('2020-01-22',5)
     edit_row_omzet vb.edit_row_omzet(1,'2022-01-12' , 1000)
     add_to_omzet vb.add_to_omzet('2020-01-12' , 500)
+
+Bestanden verkrijgen:
+    CSV: 
+        verkrijgDataCSV -> dit plaatst u in een variabele
+        CreateCSVMetData(data) -> data = u variabele
+    Excel:
+        VerkrijgDataEx() -> dit plaatst u in een variabele
+        CreateExcel(data) -> data = u variabele
